@@ -1,0 +1,8 @@
+:root{
+    --page-width: 131.5rem;
+}
+.size-m{
+    font-size: 27px;
+    line-height: 1.41;
+    letter-spacing: 0.27px;
+}

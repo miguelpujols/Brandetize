@@ -1,0 +1,213 @@
+{% style %}
+  .hero__content, .header__content{
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+  }
+  .hero__content div, .header__content div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo{
+    padding: 20px 47px 0 0;
+  }
+  .text-content{
+    padding-right: 48px;
+  }
+  .text-content div{
+    padding-right: 41px;
+  }
+  .image-content{
+    background-color: rgba(203, 111, 86, 0.13);
+    border-radius: 0 0 377px 377px;
+    min-height: 900px;
+    align-items: flex-end;
+  }
+  .image-content img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .background{
+    background-color: rgba(203, 111, 86, 0.13);
+  }
+
+  .rotating-text{
+    position: absolute;
+    top: 50px;
+  }
+  #rotatingText {
+      fill: #4b4334;
+      animation-name: rotate-circle;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes rotate-circle {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
+    .hero h2{
+        color: #4b4334;
+    }
+
+@media only screen and (min-width: 750px){
+    .hero h2{
+        font-size: 80px;
+        line-height: 1.23;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+{% endstyle %}
+<div class="hero page-width">
+    <div class="header__content">
+        <div class="logo">
+            <div class="header__heading-logo-wrapper">
+                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                {{ settings.logo | image_url: width: 600 | image_tag:
+                  class: 'header__heading-logo motion-reduce',
+                  widths: widths,
+                  height: logo_height,
+                  width: settings.logo_width,
+                  alt: logo_alt,
+                  sizes: sizes,
+                  preload: true
+                }}
+              </div>
+        </div>
+        <div class="background"></div>
+</div>
+    <div class="hero__content">
+      <div class="text-content">
+        <div>
+        {% for block in section.blocks %}
+          {% if block.type == 'heading' %}
+            <h2>{{ block.settings.heading_text }}</h2>
+          {% elsif block.type == 'paragraph' %}
+            <p class="size-m">{{ block.settings.paragraph_text }}</p>
+          {% elsif block.type == 'button' %}
+            <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_text }}</a>
+          {% endif %}
+        {% endfor %}
+        </div>
+      </div>
+      <div class="image-content">
+        <div class="rotating-text">
+            {% for block in section.blocks %}
+              {% if block.type == 'rotating_text' %}
+                <svg id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+                    <defs>
+                      <path id="circle" d="M 100, 100
+                              m -75, 0
+                              a 75, 75 0 1, 0 150, 0
+                              a 75, 75 0 1, 0 -150, 0
+                              ">
+                      </path>
+                    </defs>
+                    <text width="226">
+                      <textPath alignment-baseline="top" xlink:href="#circle" class="text" style="letter-spacing: 5px;">
+                        {{ block.settings.text }}
+                      </textPath>
+                    </text>
+                  </svg>                
+              {% endif %}
+            {% endfor %}
+          </div>
+          {{ section.settings.image | image_url: width: 584 | image_tag: widths: '584, 1168, 1752' }}     
+  
+        
+      </div>
+
+    </div>
+</div>
+  
+  {% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+      },
+      {
+        "id": "image_position",
+        "type": "select",
+        "label": "Image Position",
+        "options": [
+          { "value": "left", "label": "Left" },
+          { "value": "right", "label": "Right" }
+        ],
+        "default": "right"
+      },
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "settings": [
+          {
+            "id": "heading_text",
+            "type": "text",
+            "label": "Heading",
+            "default": "How to attract"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "name": "Paragraph",
+        "settings": [
+          {
+            "id": "paragraph_text",
+            "type": "textarea",
+            "label": "Content",
+            "default": "Overcome the beliefs that block your ability to lorem ipsum dolor sit amet."
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "name": "Button",
+        "settings": [
+          {
+            "id": "button_text",
+            "type": "text",
+            "label": "Button Label",
+            "default": "Learn More"
+          },
+          {
+            "id": "button_link",
+            "type": "url",
+            "label": "Button URL",
+          }
+        ]
+      },
+      {
+        "type": "rotating_text",
+        "name": "Rotating Text",
+        "settings": [
+          {
+            "id": "text",
+            "type": "text",
+            "label": "Text",
+            "default": "You are enough."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero",
+      }
+    ]
+  }
+  {% endschema %} 
