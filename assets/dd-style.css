@@ -11,12 +11,16 @@
         font-size: 5.6vw;
         line-height: 1.48;
     }
+  .copyright__content{
+    width: 100%;
+  }
 }
 .policies li::before {
   content: ''!important;
 }
 .footer__copyright{
   display: flex;
+  flex-wrap: wrap;
 }
 .footer__copyright .policies{
   display: inline-flex;
