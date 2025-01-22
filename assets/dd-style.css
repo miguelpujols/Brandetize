@@ -1,6 +1,12 @@
 :root{
     --page-width: 131.5rem;
 }
+h2{
+  font-size: 2.76vw;
+  line-height: 1.23;
+  font-weight: bold;
+  color: #4b4334;
+}
 .size-m{
     font-size: 1.41vw;
     line-height: 1.41;
@@ -10,6 +16,10 @@
     .size-m{
         font-size: 5.6vw;
         line-height: 1.48;
+    }
+    h2{
+      font-size: 7.47vw;
+      line-height: 2.32;
     }
   .copyright__content{
     width: 100%;
