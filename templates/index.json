@@ -117,6 +117,9 @@
         "text_imfXeB",
         "button_yTHnTc"
       ],
+      "custom_css": [
+        "@media only screen and (min-width: 750px) {.media-with-text__media-item {width: 3.29vw; }}"
+      ],
       "settings": {
         "image": "shopify://shop_images/marni-image-cluster_3x_79411ae0-ca03-4688-986b-c73a9b8b6d0a.png",
         "height": "adapt",
