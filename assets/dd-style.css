@@ -16,7 +16,7 @@
   }
 }
 .footer{
-  border: 0;
+  border: 0!important;
 }
 .policies li::before {
   content: ''!important;
