@@ -158,7 +158,9 @@
               {% endif %}
             {% endfor %}
           </div>
-          {{ section.settings.image | image_url: width: 584 | image_tag: widths: '584, 1168, 1752' }}     
+          {% if section.settings.image != blank %}
+            {{ section.settings.image | image_url: width: 584 | image_tag: widths: '584, 1168, 1752' }}    
+          {% endif %} 
   
         
       </div>
