@@ -86,49 +86,46 @@
         "heading": "What you'll achieve:"
       }
     },
-    "image_with_text_Jkd8H9": {
-      "type": "image-with-text",
+    "dd_image_with_text_bYHBNE": {
+      "type": "dd-image-with-text",
       "blocks": {
-        "heading_UgFXVQ": {
+        "heading_BUQmpw": {
           "type": "heading",
           "settings": {
-            "heading": "Meet our founder, Marni",
+            "heading": "Meet our founder, <span style=\"color:#d88d78;\">Marni</span>",
             "heading_size": "h1"
           }
         },
-        "text_imfXeB": {
+        "text_9pH86F": {
           "type": "text",
           "settings": {
-            "text": "<p>Having been married for 17 years, divorced, and successfully dated again in today’s complex social environment, and now happily married, Marni understands what it feels like to be lonely and sick of wasting time going on dates and having relationships with unavailable men that go nowhere.<br/><br/>Through her own journey to find love, Marni discovered that creating a process to shorten the journey for other women suffering from the inability to create emotionally safe and fulfilling life relationships was truly the mission of her soul and purpose. </p>",
+            "text": "<p>Having been married for 17 years, divorced, and successfully dated again in today’s complex social environment, and now happily married, Marni understands what it feels like to be lonely and sick of wasting time going on dates and having relationships with unavailable men that go nowhere.<br/><br/>Through her own journey to find love, Marni discovered that creating a process to shorten the journey for other women suffering from the inability to create emotionally safe and fulfilling life relationships was truly the mission of her soul and purpose.</p>",
             "text_style": "body"
           }
         },
-        "button_yTHnTc": {
+        "button_jg9THz": {
           "type": "button",
           "settings": {
             "button_label": "Discover Marni's Proven Process",
-            "button_link": "",
+            "button_link": "#",
             "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "heading_UgFXVQ",
-        "text_imfXeB",
-        "button_yTHnTc"
-      ],
-      "custom_css": [
-        "@media only screen and (min-width: 750px) {.image-with-text__media-item {width: 32.916vw; } .image-with-text {padding: 0 4.1666vw; }}"
+        "heading_BUQmpw",
+        "text_9pH86F",
+        "button_jg9THz"
       ],
       "settings": {
         "image": "shopify://shop_images/marni-image-cluster_3x_79411ae0-ca03-4688-986b-c73a9b8b6d0a.png",
         "height": "adapt",
-        "desktop_image_width": "small",
+        "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "middle",
+        "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
+        "section_color_scheme": "",
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
@@ -136,89 +133,71 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_NJzD6r": {
-      "type": "multicolumn",
+    "dd_multicolumn_VqiRJV": {
+      "type": "dd-multicolumn",
       "blocks": {
-        "column_6FiaW8": {
+        "column_ntdenG": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/oprah-logo.svg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "paragraph": "",
+            "margin_top": 0
           }
         },
-        "column_j7CA39": {
+        "column_4MTTUn": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/dr-phil-logo.svg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "paragraph": "",
+            "margin_top": 0
           }
         },
-        "column_J48UUy": {
+        "column_3yfL3B": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/cosmopolitan-logo.svg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "paragraph": "",
+            "margin_top": 0
           }
         },
-        "column_QUgf3C": {
+        "column_DdpnMm": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/glamour-logo.svg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "paragraph": "",
+            "margin_top": 0
           }
         },
-        "column_77dcCa": {
+        "column_V4LbNr": {
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/abc-logo.svg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "paragraph": "",
+            "margin_top": 0
           }
         }
       },
       "block_order": [
-        "column_6FiaW8",
-        "column_j7CA39",
-        "column_J48UUy",
-        "column_QUgf3C",
-        "column_77dcCa"
+        "column_ntdenG",
+        "column_4MTTUn",
+        "column_3yfL3B",
+        "column_DdpnMm",
+        "column_V4LbNr"
+      ],
+      "custom_css": [
+        ".multicolumn__wrapper {align-items: center;}",
+        ".multicolumn__wrapper .column img {max-height: 5.4166666667vw;}"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 5,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "",
+        "column_width": 269
       }
     }
   },
   "order": [
     "dd_hero_hKMDzD",
     "dd_multicolumn_ngAxxk",
-    "image_with_text_Jkd8H9",
-    "multicolumn_NJzD6r"
+    "dd_image_with_text_bYHBNE",
+    "dd_multicolumn_VqiRJV"
   ]
 }
