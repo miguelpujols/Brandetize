@@ -1,6 +1,12 @@
 :root{
     --page-width: 131.5rem;
 }
+.h1{
+  font-size: 4.79vw;
+  line-height: 1.07;
+  font-weight: bold;
+  color: #4b4334;
+}
 h2{
   font-size: 2.76vw;
   line-height: 1.23;
@@ -16,6 +22,11 @@ h2{
     .size-m{
         font-size: 5.6vw;
         line-height: 1.48;
+    }
+    .h1{
+      font-size: 10.667vw;
+      line-height: 1.25;
+      font-weight: bold;
     }
     h2{
       font-size: 7.47vw;
