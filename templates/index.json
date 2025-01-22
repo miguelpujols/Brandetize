@@ -48,9 +48,47 @@
         "image": "shopify://shop_images/PDF-cover-image.png",
         "image_position": "right"
       }
+    },
+    "dd_multicolumn_ngAxxk": {
+      "type": "dd-multicolumn",
+      "blocks": {
+        "column_BB97MM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/shape-cluster-1_3x_99d8c890-a69e-4621-a929-2f07279b78b0.png",
+            "paragraph": "Why you don’t need to settle for unhappiness in this ONE area of your life",
+            "margin_top": 0
+          }
+        },
+        "column_HNykeD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/shape-cluster-2_3x_60f09217-edd1-4afa-9e2c-53a28f3fe9a8.png",
+            "paragraph": "Why you CAN have it all (and how to stop attracting the wrong guys who are intimidated by your success)",
+            "margin_top": 122.5
+          }
+        },
+        "column_ewGyGp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/shape-cluster-3_3x_02cbc63a-5458-4732-8709-ef676b28a093.png",
+            "paragraph": "How to break down the walls that keep your authentic self hidden from your forever partner",
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "column_BB97MM",
+        "column_HNykeD",
+        "column_ewGyGp"
+      ],
+      "settings": {
+        "heading": "What you'll achieve:"
+      }
     }
   },
   "order": [
-    "dd_hero_hKMDzD"
+    "dd_hero_hKMDzD",
+    "dd_multicolumn_ngAxxk"
   ]
 }
