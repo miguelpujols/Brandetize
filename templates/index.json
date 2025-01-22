@@ -185,8 +185,9 @@
         "column_V4LbNr"
       ],
       "custom_css": [
-        ".multicolumn.multicolumn__wrapper .column img {max-height: 5.4166666667vw;}",
-        "@media only screen and (max-width: 749px) {.multicolumn__wrapper {flex-direction: row; flex-wrap: wrap; gap: 0; padding: 0; } .column {flex: 0 0 33%; margin: 0; } .multicolumn__wrapper .column:nth-of-type(3) {order: 4; flex: 0 0 50%; } .multicolumn__wrapper .column:nth-of-type(4) {order: 5; flex: 0 0 50%; } .multicolumn__wrapper .column img {max-height: 18.6666666667vw; } .multicolumn__wrapper .column:is(:nth-of-type(3), :nth-of-type(4)) img {max-height: 7.01333333333vw; }}"
+        ".multicolumn__wrapper {align-items: center;}",
+        ".multicolumn__wrapper .column img {max-height: 5.417vw;}",
+        "@media (max-width: 749px) {.multicolumn__wrapper {flex-direction: row; flex-wrap: wrap; gap: 0; padding: 0; } .column {flex: 0 0 33%; margin: 0; } .column:nth-of-type(3) {order: 4; flex: 0 0 50%; } .column:nth-of-type(4) {order: 5; flex: 0 0 50%; } .column img {max-height: 18.667vw; } .column:nth-of-type(3), .column:nth-of-type(4) img {max-height: 7.013vw; }}"
       ],
       "settings": {
         "heading": "",
