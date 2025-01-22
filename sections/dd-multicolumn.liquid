@@ -1,0 +1,85 @@
+<style>
+  .multicolumn__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 3.86vw;
+  }
+  .column{
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 749px){
+    .multicolumn__wrapper{
+      flex-direction: column;
+    }
+    .column{
+      margin-top: 30px!important;
+    }
+  }
+
+</style>
+
+<div class="dd-multicolumn page-width">
+  {%- unless section.settings.heading == blank -%}
+      <div class="title-wrapper--self-padded-mobile center">
+          <h2 class="title">
+          {{ section.settings.heading }}
+          </h2>
+      </div>
+  {%- endunless -%}
+  <div class="multicolumn__wrapper">
+  {% for block in section.blocks %}
+      <div class="column" style="margin-top: {{ block.settings.margin_top }}px;">
+          {{ block.settings.image | image_url: width: 271 | image_tag }}     
+          <p class="size-m">{{ block.settings.paragraph }}</p>
+      </div>
+    {% endfor %}
+  </div>      
+</div>
+
+{% schema %}
+{
+"name": "Custom Multicolumn",
+"settings": [
+  {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+  }
+],
+"blocks": [
+  {
+    "type": "column",
+    "name": "Column",
+    "settings": [
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "paragraph",
+        "type": "text",
+        "label": "Paragraph"
+      },
+      {
+        "id": "margin_top",
+        "type": "number",
+        "label": "Margin Top (px)",
+        "default": 0
+      }
+    ]
+  }
+],
+"presets": [
+  {
+    "name": "Custom Multicolumn",
+  }
+]
+}
+{% endschema %}
