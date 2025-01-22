@@ -15,3 +15,9 @@
 .policies li::before {
   content: ''!important;
 }
+.footer__copyright{
+  display: flex;
+}
+.policies{
+  display: inline-flex;
+}

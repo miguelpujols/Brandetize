@@ -303,7 +303,7 @@
           >Copyright &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url -}}. All Rights Reserved.
         </small>
         {%- if section.settings.show_policy -%}
-          |
+          <small class="copyright__content"> | </small>
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
