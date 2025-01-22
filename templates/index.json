@@ -92,21 +92,21 @@
         "heading_UgFXVQ": {
           "type": "heading",
           "settings": {
-            "heading": "Meet our founder, <span style=\"\">Marni</span>",
+            "heading": "Meet our founder, Marni",
             "heading_size": "h1"
           }
         },
         "text_imfXeB": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Having been married for 17 years, divorced, and successfully dated again in today’s complex social environment, and now happily married, Marni understands what it feels like to be lonely and sick of wasting time going on dates and having relationships with unavailable men that go nowhere.<br/><br/>Through her own journey to find love, Marni discovered that creating a process to shorten the journey for other women suffering from the inability to create emotionally safe and fulfilling life relationships was truly the mission of her soul and purpose. </p>",
             "text_style": "body"
           }
         },
         "button_yTHnTc": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Discover Marni's Proven Process",
             "button_link": "",
             "button_style_secondary": false
           }
@@ -118,10 +118,11 @@
         "button_yTHnTc"
       ],
       "settings": {
+        "image": "shopify://shop_images/marni-image-cluster_3x_79411ae0-ca03-4688-986b-c73a9b8b6d0a.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "section_color_scheme": "",
