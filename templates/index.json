@@ -186,7 +186,7 @@
       ],
       "custom_css": [
         ".multicolumn__wrapper .column img {max-height: 5.4166666667vw;}",
-        "@media only screen and (max-width: 749px) {.multicolumn__wrapper {flex-direction: row; flex-wrap: wrap; gap: 0; } .column {flex: 0 0 33%; } .multicolumn__wrapper .column:nth-of-type(3) {order: 4; flex: 0 0 50%; } .multicolumn__wrapper .column:nth-of-type(4) {order: 5; flex: 0 0 50%; } .multicolumn__wrapper .column img {max-height: 18.6666666667vw; } .multicolumn__wrapper .column:is(:nth-of-type(3), :nth-of-type(4)) img {max-height: 7.01333333333vw; }}"
+        "@media only screen and (max-width: 749px) {.multicolumn__wrapper {flex-direction: row; flex-wrap: wrap; gap: 0; padding: 0; } .column {flex: 0 0 33%; margin: 0; } .multicolumn__wrapper .column:nth-of-type(3) {order: 4; flex: 0 0 50%; } .multicolumn__wrapper .column:nth-of-type(4) {order: 5; flex: 0 0 50%; } .multicolumn__wrapper .column img {max-height: 18.6666666667vw; } .multicolumn__wrapper .column:is(:nth-of-type(3), :nth-of-type(4)) img {max-height: 7.01333333333vw; }}"
       ],
       "settings": {
         "heading": "",
