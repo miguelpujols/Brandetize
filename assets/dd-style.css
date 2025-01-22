@@ -12,3 +12,6 @@
         line-height: 1.48;
     }
 }
+.policies li::before {
+  content: '';
+}
