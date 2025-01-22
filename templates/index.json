@@ -186,7 +186,7 @@
       ],
       "custom_css": [
         ".multicolumn__wrapper .column img {max-height: 5.4166666667vw;}",
-        "@media only screen and (max-width: 749px) {.multicolumn__wrapper {flex-direction: row; flex-wrap: wrap; } .multicolumn__wrapper .column:nth-of-type(3), .multicolumn__wrapper .column:nth-of-type(4){order: 4; width: 50%; } }"
+        "@media only screen and (max-width: 749px) {.multicolumn__wrapper {flex-direction: row; flex-wrap: wrap; } .column{width: 33%; } .multicolumn__wrapper .column:nth-of-type(3), .multicolumn__wrapper .column:nth-of-type(4) {order: 4; width: 50%; }}"
       ],
       "settings": {
         "heading": "",
