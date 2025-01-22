@@ -2,7 +2,13 @@
     --page-width: 131.5rem;
 }
 .size-m{
-    font-size: 27px;
+    font-size: 1.41vw;
     line-height: 1.41;
     letter-spacing: 0.27px;
+}
+@media only screen and (max-width: 749px){
+    .size-m{
+        font-size: 5.6vw;
+        line-height: 1.48;
+    }
 }

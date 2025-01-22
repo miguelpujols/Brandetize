@@ -11,34 +11,30 @@
     justify-content: center;
   }
   .logo{
-    padding: 20px 47px 0 0;
-  }
-  .text-content{
-    padding-right: 48px;
-  }
-  .text-content div{
-    padding-right: 41px;
+    padding: 1.04vw 2.45vw 0 0;
   }
   .image-content{
     background-color: rgba(203, 111, 86, 0.13);
     border-radius: 0 0 377px 377px;
-    min-height: 900px;
     align-items: flex-end;
+    padding-top: 5.21vw;
+    padding-bottom: 3.39vw;
   }
   .image-content img{
     margin-left: auto;
     margin-right: auto;
-  }
-  .background{
-    background-color: rgba(203, 111, 86, 0.13);
+    max-width: 87.4%;
+    height: auto;
   }
 
   .rotating-text{
     position: absolute;
-    top: 50px;
+    top: 3.63vw;
   }
   #rotatingText {
       fill: #4b4334;
+      width: 10.42vw;
+      height: 10.42vw;
       animation-name: rotate-circle;
       animation-duration: 10s;
       animation-timing-function: linear;
@@ -57,11 +53,52 @@
 
 @media only screen and (min-width: 750px){
     .hero h2{
-        font-size: 80px;
+        font-size: 4.17vw;
         line-height: 1.23;
         font-weight: bold;
         margin: 0;
     }
+    .background{
+    background-color: rgba(203, 111, 86, 0.13);
+  }
+  .text-content{
+    padding-right: 2.5vw;
+  }
+  .text-content div{
+    padding-right: 2.14vw;
+  }
+}
+@media only screen and (max-width: 749px){
+  .header__content{
+    background: rgba(203, 111, 86, 0.13);
+    align-items: center;
+    flex-direction: column;
+  }
+  .header__content .background{
+    display: none;
+  }
+  .hero__content{
+    flex-direction: column-reverse;
+  }
+  .image-content{
+    padding-bottom: 0;
+  }
+  .rotating-text{
+    display: none!important;
+  }
+  .hero h2{
+    font-size: 8.8vw;
+    line-height: 1.29;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 16px;
+  }  
+  .hero p{
+    padding: 0 16px;
+  }
+  .image-content img{
+    max-width: 67.2%;
+  }
 }
 {% endstyle %}
 <div class="hero page-width">
@@ -113,7 +150,7 @@
                       </path>
                     </defs>
                     <text width="226">
-                      <textPath alignment-baseline="top" xlink:href="#circle" class="text" style="letter-spacing: 5px;">
+                      <textPath alignment-baseline="top" xlink:href="#circle" class="text" style="font-size: 19px;">
                         {{ block.settings.text }}
                       </textPath>
                     </text>
