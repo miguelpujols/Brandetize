@@ -21,6 +21,7 @@
 .footer__copyright{
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .footer__copyright .policies{
   display: inline-flex;
