@@ -13,5 +13,5 @@
     }
 }
 .policies li::before {
-  content: '';
+  content: ''!important;
 }
