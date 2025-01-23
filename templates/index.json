@@ -27,8 +27,9 @@
         "button_8ABr9F": {
           "type": "button",
           "settings": {
-            "button_text": "Download Your Guide Now",
-            "button_link": ""
+            "button_text_desktop": "Download Your Guide Now",
+            "button_text_mobile": "Download Your Guide",
+            "button_link": "#"
           }
         },
         "rotating_text_haAtT8": {
@@ -106,7 +107,8 @@
         "button_jg9THz": {
           "type": "button",
           "settings": {
-            "button_label": "Discover Marni's Proven Process",
+            "button_label_mobile": "Learn More",
+            "button_label_desktop": "Discover Marni's Proven Process",
             "button_link": "#",
             "button_style_secondary": false
           }
