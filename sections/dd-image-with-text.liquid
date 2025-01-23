@@ -25,6 +25,9 @@
         margin-bottom: 20px;
         text-align: center;
     }
+    .image-with-text__content .button--primary{
+      width: 100%;
+    }
 
   }
 
@@ -139,7 +142,7 @@
                     {{ block.settings.text }}
                   </div>
                 {%- when 'button' -%}
-                  {%- if block.settings.button_label != blank -%}
+                  {%- if block.settings.button_label_desktop != blank -%}
                     <a
                       {% if block.settings.button_link == blank %}
                         role="link" aria-disabled="true"
@@ -147,9 +150,9 @@
                         href="{{ block.settings.button_link }}"
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                      {{ block.shopify_attributes }}
+                      {{ block.shopify_attributes }} data-mobile-text="{{ block.settings.button_label_mobile }}" data-desktop-text="{{ block.settings.button_label_desktop }}"
                     >
-                      {{ block.settings.button_label | escape }}
+                      {{ block.settings.button_label_desktop | escape }}
                     </a>
                   {%- endif -%}
               {%- endcase -%}
@@ -504,11 +507,18 @@
       "settings": [
         {
           "type": "text",
-          "id": "button_label",
+          "id": "button_label_mobile",
           "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
-          "label": "t:sections.image-with-text.blocks.button.settings.button_label.label",
+          "label": "Label for Mobile",
           "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
         },
+        {
+          "type": "text",
+          "id": "button_label_desktop",
+          "default": "t:sections.image-with-text.blocks.button.settings.button_label.default",
+          "label": "Label for desktop",
+          "info": "t:sections.image-with-text.blocks.button.settings.button_label.info"
+        },        
         {
           "type": "url",
           "id": "button_link",

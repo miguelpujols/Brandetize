@@ -31,7 +31,7 @@
     position: absolute;
     top: 3.63vw;
   }
-  #rotatingText {
+  .rotating-text svg {
       fill: #4b4334;
       width: 10.42vw;
       height: 10.42vw;
@@ -131,7 +131,7 @@
           {% elsif block.type == 'paragraph' %}
             <p class="size-m">{{ block.settings.paragraph_text }}</p>
           {% elsif block.type == 'button' %}
-            <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_text }}</a>
+            <a href="{{ block.settings.button_link }}" data-mobile-text="{{ block.settings.button_text_mobile }}" data-desktop-text="{{ block.settings.button_text_desktop }}" class="button hero-cta">{{ block.settings.button_text_desktop }}</a>
           {% endif %}
         {% endfor %}
         </div>
@@ -140,21 +140,7 @@
         <div class="rotating-text">
             {% for block in section.blocks %}
               {% if block.type == 'rotating_text' %}
-                <svg id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
-                    <defs>
-                      <path id="circle" d="M 100, 100
-                              m -75, 0
-                              a 75, 75 0 1, 0 150, 0
-                              a 75, 75 0 1, 0 -150, 0
-                              ">
-                      </path>
-                    </defs>
-                    <text width="226">
-                      <textPath alignment-baseline="top" xlink:href="#circle" class="text" style="font-size: 19px;">
-                        {{ block.settings.text }}
-                      </textPath>
-                    </text>
-                  </svg>                
+                  {{ block.settings.text }}
               {% endif %}
             {% endfor %}
           </div>
@@ -218,11 +204,17 @@
         "name": "Button",
         "settings": [
           {
-            "id": "button_text",
+            "id": "button_text_desktop",
             "type": "text",
-            "label": "Button Label",
+            "label": "Label for Desktop",
             "default": "Learn More"
           },
+          {
+            "id": "button_text_mobile",
+            "type": "text",
+            "label": "Label for Mobile",
+            "default": "Learn More"
+          },          
           {
             "id": "button_link",
             "type": "url",
@@ -236,9 +228,8 @@
         "settings": [
           {
             "id": "text",
-            "type": "text",
-            "label": "Text",
-            "default": "You are enough."
+            "type": "html",
+            "label": "Rotating text SVG"
           }
         ]
       }
