@@ -13,6 +13,9 @@ h2{
   font-weight: bold;
   color: #4b4334;
 }
+h3, h4{
+  font-family: PlayfairDisplay;
+}
 .size-m{
     font-size: 1.41vw;
     line-height: 1.41;
