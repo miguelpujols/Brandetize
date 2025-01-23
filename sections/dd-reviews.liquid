@@ -1,0 +1,259 @@
+{% style %}
+#shopify-section-{{ section.id }}{
+    background: #7e7666;
+}
+.reviews-container h2{
+    color: #fffaf3;
+    margin-top: 0;
+}
+.swiper-slide{
+    background-color: #e0d3c2;
+}
+.review-subheading{
+    color: #4b4334;
+    font-weight: bold;
+}
+.review-text{
+    color: #7e7666;
+    font-size: 21px;
+}
+.reviewer{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+.reviewer span{
+    font-family: 'Playfair Display';
+    font-style: italic;
+    color: #535353;
+}
+
+@media (min-width: 750px) {
+  .reviews-container{
+    padding-top: 6.25vw;
+    padding-bottom: 6.25vw;
+  }
+  .swiper-wrapper {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .swiper-slide {
+    padding: 2rem;
+    flex: 1;
+  }
+
+  .swiper-slide.odd {
+    border-radius: 0 0 9.1666666667vw 0;
+    padding: 1.875vw 3.75vw;
+  }
+
+  .swiper-slide.even {
+    border-radius: 9.1666666667vw 0 0 0;
+    padding: 1.875vw 3.28125vw 1.875vw 5.78125vw;
+  }
+  .review-subheading{
+    font-size: 30px;
+    line-height: 1.33;
+  }
+  .review-text{
+    line-height: 1.43;
+  }
+  .reviewer span{
+    font-size: 1.5625vw;
+    line-height: 1.73;
+  }
+  .reviews-container h2{
+    padding-right: 50%;
+  }
+}
+
+@media (max-width: 749px) {
+    .reviews-container{
+        padding-top: 20.8vw;
+        padding-bottom: 20.8vw;
+    }
+    .reviews-container h2{
+        line-height: 1.36;
+    }
+    .swiper-wrapper{
+        overflow: hidden;
+    }
+    .swiper-slide {
+        border-radius: 0 0 22.6666vw 0;
+        padding: 9.6vw 0 17.04vw 0;
+    }
+    .swiper-slide h3, .swiper-slide p{
+        padding: 0 5.3333vw;
+    }
+    .swiper-slide img{
+        padding-left: 5.3333vw;
+    }
+    .review-subheading{
+        font-size: 6.4vw;
+        line-height: 1.42;
+    }
+    .review-text{
+        line-height: 1.38;
+    }
+    .reviewer span{
+        font-size: 6.1333333333vw;
+        line-height: 1.74;
+    }    
+}
+
+{% endstyle %}
+
+{% render 'swiper-include' %}
+
+<div class="reviews-container page-width">
+    <h2>{{ section.settings.section_heading }}</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+            {% assign mod = forloop.index | modulo: 2 %}
+          <div class="swiper-slide review-block {% if mod == 0 %} even {% else %} odd {% endif %} review-{{ forloop.index }}">
+                <h3 class="review-subheading">{{ block.settings.review_subheading }}</h3>
+            <p class="review-text">{{ block.settings.review_text }}</p>
+            <div class="reviewer">
+                {% if block.settings.review_image != blank %}
+                    {{ block.settings.review_image | image_url: width: 62 | image_tag }}    
+                {% endif %}
+                <span class="review-name">{{ block.settings.review_name }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.show_arrows %}
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      {% endif %}
+      {% if section.settings.show_pagination %}
+        <div class="swiper-pagination"></div>
+      {% endif %}
+    </div>
+</div>
+
+<script>
+    window.addEventListener("load", () => {
+        const container = document.querySelector(".reviews-container");
+        const review = document.querySelector(".review-2");
+
+        const swiper = new Swiper(".swiper-container", {
+            // Your Swiper options
+            on: {
+              init: () => {
+                addNegativeMargin(); // Run adjustment after Swiper initializes
+              },
+              resize: () => {
+                addNegativeMargin(); // Run adjustment on window resize
+              },
+            },
+          });        
+
+        function addNegativeMargin() {      
+        // Check if the screen width is above 750px
+        if (window.innerWidth > 750) {
+          // Calculate the distance between the top of .wrapper and the top of .review-2
+          const containerTop = container.getBoundingClientRect().top;
+          const review2Top = review.getBoundingClientRect().top;
+          const containerStyle = window.getComputedStyle(container);
+
+      
+          const offset = review2Top - containerTop - parseFloat(containerStyle.paddingTop);
+
+          console.log(offset);
+      
+          // Dynamically set the negative margin
+          review.style.marginTop = `-${offset}px`;
+        } else {
+          // Reset the margin-top for smaller screens
+          review.style.marginTop = "0px";
+        }
+      }
+      
+      // Observe changes to .wrapper and .child-2
+      const observer = new ResizeObserver(() => {
+        addNegativeMargin();
+      });
+      
+      // Start observing
+      observer.observe(container);
+      observer.observe(review);
+      
+      // Initial adjustment on page load
+      addNegativeMargin();
+      
+      // Reapply adjustments on window resize
+      window.addEventListener("resize", addNegativeMargin);
+    });
+      
+</script>
+
+{% schema %}
+{
+    "name": "Reviews Section",
+    "settings": [
+      {
+        "type": "html",
+        "id": "section_heading",
+        "label": "Heading",
+        "default": "What Our Customers Say"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_arrows",
+        "label": "Show navigation arrows",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_pagination",
+        "label": "Show pagination dots",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "text",
+            "id": "review_subheading",
+            "label": "Review Subheading",
+            "default": "Amazing Service"
+          },
+          {
+            "type": "textarea",
+            "id": "review_text",
+            "label": "Review Text",
+            "default": "I absolutely loved the product! The quality is unmatched."
+          },
+          {
+            "type": "image_picker",
+            "id": "review_image",
+            "label": "Reviewer Image"
+          },
+          {
+            "type": "text",
+            "id": "review_name",
+            "label": "Reviewer Name",
+            "default": "John Doe"
+          },
+          {
+            "type": "number",
+            "id": "top-margin",
+            "label": "Top Margin (px)",
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Reviews",
+      }
+    ]
+  }
+  
+{% endschema %}
