@@ -193,12 +193,47 @@
         "heading": "",
         "column_width": 269
       }
+    },
+    "dd_collapsible_with_image_3WChm4": {
+      "type": "dd-collapsible-with-image",
+      "blocks": {
+        "collapsible_block_hrX8ni": {
+          "type": "collapsible_block",
+          "settings": {
+            "title": "Let go of limiting beliefs",
+            "description": "If you don’t think you deserve a good man, you’re grappling with accepting that a relationship is not in the cards for you, or you think you have to settle for a less than ideal soul mate, we’ll help you identify and learn to let go of what’s holding you back."
+          }
+        },
+        "collapsible_block_bYRkrM": {
+          "type": "collapsible_block",
+          "settings": {
+            "title": "Break down barriers",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          }
+        },
+        "collapsible_block_bkn64b": {
+          "type": "collapsible_block",
+          "settings": {
+            "title": "Fall in love with your true self",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus, felis sit amet posuere consequat, dui nisi euismod elit, sed interdum risus dolor et enim. Pellentesque semper aliquet dolor a faucibus. Sed laoreet malesuada urna non euismod. In magna urna, posuere in mollis finibus, cursus eu mi. Phasellus in justo ex."
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_block_hrX8ni",
+        "collapsible_block_bYRkrM",
+        "collapsible_block_bkn64b"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mask-group-120_3x_f016961c-8e9e-4bf5-a3a7-c8e1bb24a0e0.png"
+      }
     }
   },
   "order": [
     "dd_hero_hKMDzD",
     "dd_multicolumn_ngAxxk",
     "dd_image_with_text_bYHBNE",
-    "dd_multicolumn_VqiRJV"
+    "dd_multicolumn_VqiRJV",
+    "dd_collapsible_with_image_3WChm4"
   ]
 }
