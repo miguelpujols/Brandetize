@@ -227,6 +227,38 @@
       "settings": {
         "image": "shopify://shop_images/mask-group-120_3x_f016961c-8e9e-4bf5-a3a7-c8e1bb24a0e0.png"
       }
+    },
+    "dd_reviews_N8HCB9": {
+      "type": "dd-reviews",
+      "blocks": {
+        "review_abhANM": {
+          "type": "review",
+          "settings": {
+            "review_subheading": "“Once Marni held me accountable, it was easier for me to finally recognize when Mr. Right (Mark) came along.”",
+            "review_text": "If I hadn’t followed the guiding hand of Marni, I wouldn’t have been ready to accept the moments and opportunities presented to me every day.",
+            "review_image": "shopify://shop_images/testimonial-1-image_3x_bacbc17c-de51-4fac-9f95-2eb4b28f08a6.png",
+            "review_name": "Janice"
+          }
+        },
+        "review_fB7E4N": {
+          "type": "review",
+          "settings": {
+            "review_subheading": "“I am now much more grounded and confident and I feel like I’m living the life that I wanted to live now.”",
+            "review_text": "When I first joined the program, the best initial results I got were me actually loving who I am. I think I always had an appreciation for myself, but I didn’t truly believe that I was worthy of great things.",
+            "review_image": "shopify://shop_images/testimonial-2-image_3x_94682aa9-f73d-43de-968f-5e5040b88fb3.png",
+            "review_name": "Jill"
+          }
+        }
+      },
+      "block_order": [
+        "review_abhANM",
+        "review_fB7E4N"
+      ],
+      "settings": {
+        "section_heading": "See how women have been impacted by the <span style=\"color: #ddba7c;\">power of love:</span>",
+        "show_arrows": true,
+        "show_pagination": true
+      }
     }
   },
   "order": [
@@ -234,6 +266,7 @@
     "dd_multicolumn_ngAxxk",
     "dd_image_with_text_bYHBNE",
     "dd_multicolumn_VqiRJV",
-    "dd_collapsible_with_image_3WChm4"
+    "dd_collapsible_with_image_3WChm4",
+    "dd_reviews_N8HCB9"
   ]
 }
