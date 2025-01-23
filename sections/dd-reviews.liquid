@@ -2,12 +2,27 @@
 #shopify-section-{{ section.id }}{
     background: #7e7666;
 }
+.swiper-container{
+    position: relative;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+
 .reviews-container h2{
     color: #fffaf3;
     margin-top: 0;
 }
 .swiper-slide{
     background-color: #e0d3c2;
+    box-shadow: 20px 20px 12px 0 rgba(116, 108, 93, 0.62);
 }
 .review-subheading{
     color: #4b4334;
@@ -76,12 +91,40 @@
     .reviews-container h2{
         line-height: 1.36;
     }
-    .swiper-wrapper{
+    .swiper-container{
+        padding-bottom: 45px;
+        align-items: stretch;
         overflow: hidden;
     }
-    .swiper-slide {
+    .swiper-pagination, .swiper-container .swiper-button-prev, .swiper-container .swiper-button-next{
+        position: absolute;
+        top: var(--swiper-navigation-top-offset,calc(100% - 35px))!important;
+        margin-top: 0;
+        color: #e0d3c2;
+        z-index: 999;
+    }
+    .swiper-container .swiper-button-next:after, .swiper-container .swiper-button-prev:after{
+        font-size: 18px;
+    }
+    .swiper-container .swiper-pagination-bullet-active{
+        background: #e0d3c2;
+    }
+    .swiper-container .swiper-pagination-bullet{
+        background-color: rgba(224, 211, 194, 0.4);
+    }
+    .swiper-pagination{
+        padding:10px;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        z-index: 10;
+        padding: 10px;
+        display: block!important;
+    }
+    .swiper-container .swiper-slide {
         border-radius: 0 0 22.6666vw 0;
         padding: 9.6vw 0 17.04vw 0;
+        margin-right: 20px;
+        height: auto;
     }
     .swiper-slide h3, .swiper-slide p{
         padding: 0 5.3333vw;

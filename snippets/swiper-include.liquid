@@ -6,31 +6,36 @@
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 24,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 32,
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiperBreakpoint = 749;
+      let swiperInstance = null;
+    
+      const initializeSwiper = () => {
+        if (window.innerWidth <= swiperBreakpoint) {
+          if (!swiperInstance) {
+            swiperInstance = new Swiper(".swiper-container", {
+              slidesPerView: 1,
+              spaceBetween: 20,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
           }
+        } else if (swiperInstance) {
+          swiperInstance.destroy(true, true);
+          swiperInstance = null;
         }
-      });
+      };
+    
+      // Initialize on load and on resize
+      initializeSwiper();
+      window.addEventListener("resize", initializeSwiper);
     });
-  </script>
+      </script>
   
   
