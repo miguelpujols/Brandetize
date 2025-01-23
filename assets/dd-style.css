@@ -16,6 +16,10 @@ h2{
 h3, h4{
   font-family: "Playfair Display", serif;
 }
+.size-s{
+  font-size: 1.04166666667vw;
+  line-height: 1.5;
+}
 .size-m{
     font-size: 1.41vw;
     line-height: 1.41;
@@ -25,6 +29,11 @@ h3, h4{
     .size-m{
         font-size: 5.6vw;
         line-height: 1.48;
+    }
+    .size-s{
+      font-size: 4.8vw;
+      line-height: 1.56;
+      letter-spacing: 0.18px;
     }
     .h1{
       font-size: 10.667vw;
