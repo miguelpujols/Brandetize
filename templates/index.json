@@ -259,6 +259,43 @@
         "show_arrows": true,
         "show_pagination": true
       }
+    },
+    "dd_agenda_timeline_FqcGza": {
+      "type": "dd-agenda-timeline",
+      "blocks": {
+        "agenda_day_VnKKCn": {
+          "type": "agenda_day",
+          "settings": {
+            "heading": "Your REVEAL Day! (aka The Silver Bullet)",
+            "description": "Identify your personal 10% blindspot (everyone has one) that sends quality men running for the hills and clear limiting beliefs that keep you stuck in the scarcity mindset (so you can attract a quality man who’s words and actions actually match).\n\nBy the end of the day, you’ll know EXACTLY why you’re single and what next steps are required to get you closer to magnetizing high-caliber men and creating the life you love.",
+            "page": "day-1-agenda"
+          }
+        },
+        "agenda_day_rwEhkU": {
+          "type": "agenda_day",
+          "settings": {
+            "heading": "Your 2 REVEAL Day! (aka The Silver Bullet)",
+            "description": "Identify your personal 10% blindspot (everyone has one) that sends quality men running for the hills and clear limiting beliefs that keep you stuck in the scarcity mindset (so you can attract a quality man who’s words and actions actually match).\n\nBy the end of the day, you’ll know EXACTLY why you’re single and what next steps are required to get you closer to magnetizing high-caliber men and creating the life you love.",
+            "page": "day-1-agenda"
+          }
+        },
+        "agenda_day_7kJDEC": {
+          "type": "agenda_day",
+          "settings": {
+            "heading": "Your 3 REVEAL Day! (aka The Silver Bullet)",
+            "description": "Identify your personal 10% blindspot (everyone has one) that sends quality men running for the hills and clear limiting beliefs that keep you stuck in the scarcity mindset (so you can attract a quality man who’s words and actions actually match).\n\nBy the end of the day, you’ll know EXACTLY why you’re single and what next steps are required to get you closer to magnetizing high-caliber men and creating the life you love.",
+            "page": "day-1-agenda"
+          }
+        }
+      },
+      "block_order": [
+        "agenda_day_VnKKCn",
+        "agenda_day_rwEhkU",
+        "agenda_day_7kJDEC"
+      ],
+      "settings": {
+        "section_heading": "What’s on the agenda"
+      }
     }
   },
   "order": [
@@ -267,6 +304,7 @@
     "dd_image_with_text_bYHBNE",
     "dd_multicolumn_VqiRJV",
     "dd_collapsible_with_image_3WChm4",
-    "dd_reviews_N8HCB9"
+    "dd_reviews_N8HCB9",
+    "dd_agenda_timeline_FqcGza"
   ]
 }
