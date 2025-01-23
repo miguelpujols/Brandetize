@@ -16,3 +16,20 @@ function updateButtonText() {
 updateButtonText();
 
 window.addEventListener('resize', updateButtonText);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const accordions = document.querySelectorAll(".accordion details");
+  
+    accordions.forEach((accordion) => {
+      accordion.addEventListener("click", function () {
+        // Close all other accordions
+        accordions.forEach((otherAccordion) => {
+          if (otherAccordion !== this) {
+            otherAccordion.removeAttribute("open");
+          }
+        });
+      });
+    });
+  });
+  
